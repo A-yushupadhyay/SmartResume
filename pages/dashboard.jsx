@@ -64,7 +64,7 @@ export default function DashboardPage() {
 
                 <div className="flex flex-wrap items-center gap-4 mt-4">
                   <a
-                    href={`http://localhost:5000/file/${encodeURIComponent(resume.fileName)}`}
+                    href={`https://smartresumebackendapi.onrender.com/file/${encodeURIComponent(resume.fileName)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 font-medium hover:underline"
@@ -73,7 +73,7 @@ export default function DashboardPage() {
                   </a>
 
                   <a
-                    href={`http://localhost:5000/file/${encodeURIComponent(resume.fileName)}`}
+                    href={`https://smartresumebackendapi.onrender.com/file/${encodeURIComponent(resume.fileName)}`}
                     download
                     className="text-green-600 font-medium hover:underline"
                   >
@@ -90,7 +90,7 @@ export default function DashboardPage() {
 
                 <div className="mt-4 border border-gray-200 rounded-md bg-gray-50 p-4">
                   <PDFViewer
-                    fileUrl={`http://localhost:5000/file/${encodeURIComponent(resume.fileName)}`}
+                    fileUrl={`https://smartresumebackendapi.onrender.com/file/${encodeURIComponent(resume.fileName)}`}
                     singlePageOnly={true}
                   />
                 </div>
