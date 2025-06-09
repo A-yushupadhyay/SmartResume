@@ -1,40 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# 💼 SmartResume - Frontend
 
-First, run the development server:
+This is the **frontend** of SmartResume — an intelligent resume analyzer app built with **Next.js**, TailwindCSS, and Axios.
+
+It allows users to:
+
+- 🧑‍💼 Register & Login
+- 📤 Upload resumes (PDF)
+- 📊 Analyze resume content
+- 💾 View & download past resumes
+- 🗑️ Delete unwanted files
+- 🔐 Access everything securely via session-based auth
+
+Live URL 👉 [smart-resume-ja3k.vercel.app](https://smart-resume-ja3k.vercel.app)
+
+---
+
+## 🎥 Demo
+
+check review demo -
+
+
+---![Screenshot (267)](https://github.com/user-attachments/assets/59a2295e-3e75-450a-a93b-42c884fce30e)
+
+![Screenshot (268)](https://github.com/user-attachments/assets/d722b159-0532-42c9-91ca-4847f66100c1)
+
+ ![Screenshot (269)](https://github.com/user-attachments/assets/ae042923-0d8f-4180-9eb2-b34413a4970b)
+
+![Screenshot (270)](https://github.com/user-attachments/assets/bb788821-bb65-4cc1-9ab3-8755251a1b5c)
+
+![Screenshot (271)](https://github.com/user-attachments/assets/c4ee2d00-bab0-442a-bcf7-2be814cec079)
+
+![Screenshot (272)](https://github.com/user-attachments/assets/6100505b-0ce3-4aac-a618-75d6bf5fa7a7)
+
+![Screenshot (273)](https://github.com/user-attachments/assets/de505d95-d20a-41a0-b208-83752eb18e18)
+
+
+
+
+
+
+## 🛠️ Tech Stack
+
+
+- ✅ Next.js 13+
+- ✅ Tailwind CSS
+- ✅ Axios
+- ✅ Session Cookies (cross-origin)
+- ✅ PDF.js (for viewing uploaded resumes)
+- ✅ React Protected Routes
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the Repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/A-yushupadhyay/SmartResume.git
+cd SmartResume
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Create .env.local File
+NEXT_PUBLIC_API_URL=https://smartresumebackendapi.onrender.com
+⚠️ Make sure this URL matches your deployed backend API.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+🚀 Run Locally
+npm run dev
+Frontend will start on http://localhost:3000
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+🔐 Auth Handling
+Uses cookie-based sessions set by Express backend
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Axios requests are made with withCredentials: true
 
-## Learn More
+Protected routes use a custom <ProtectedRoute> wrapper
 
-To learn more about Next.js, take a look at the following resources:
+📁 Pages Overview
+Path	Description
+/      	      --->          Landing Page
+/register	    --->         Register a new user
+/login	      --->        Login existing user
+/upload	      --->     Upload + analyze resumes
+/dashboard    --->     Download different resume 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+🌐 Deployment (Vercel)
+This project is deployed on Vercel with backend hosted on Render.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ Deployed Frontend: https://smart-resume-ja3k.vercel.app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+ Deployed Backend: https://smartresumebackendapi.onrender.com
+
+✨ Features
+Resume parsing using pdf-parse
+
+Auto job matching based on keywords
+
+File viewer + downloader using PDF.js
+
+Session-based authentication
+
+Mobile responsive UI with Tailwind
+
+
+📄 License
+MIT License
+
+
+-----------------------------------------@
+                                         @
+👤 Author                               @
+Made with ❤️ by Ayush Upadhyay          @
+                                        @
+--------------------------------------- @
